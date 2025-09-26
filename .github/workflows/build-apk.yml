@@ -13,3 +13,8 @@ jobs:
         cd app_source/my_app_source
         flutter pub get
         flutter build apk
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-release
+        path: app_source/my_app_source/build/app/outputs/flutter-apk/app-release.apk
